@@ -1,0 +1,18 @@
+<!-- app/views/customers/_customer.html.erb -->
+<div class="box customer">
+  <div class="media">
+    <% if customer.image.attached? %>
+      <div class="media-left">
+        <figure class="image is-128x128">
+          <%= image_tag customer.image, class: "is-rounded" %>
+        </figure>
+      </div>
+    <% end %>
+    <div class="media-content">
+      <h2 class="title is-4"><%= customer.full_name %></h2>
+      <p><strong>Phone:</strong> <%= customer.phone_number %></p>
+      <p><strong>Email:</strong> <%= customer.email_address.presence || "N/A" %></p>
+      <p><strong>Notes:</strong> <%= customer.notes %></p>
+    </div>
+  </div>
+</div>
