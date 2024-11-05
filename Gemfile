@@ -20,9 +20,9 @@ gem "jbuilder"
 # gem "redis", ">= 4.0.1"
 
 
-gem 'devise'
-gem 'activeadmin'
-gem 'sassc-rails'
+gem "devise"
+gem "activeadmin"
+gem "sassc-rails"
 
 
 
