@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Simple Crm" %></title>
+    <title><%= content_for(:title) || "Simple CRM" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
@@ -18,6 +18,7 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %> <!-- This renders the header partial -->
+    <%= yield %> <!-- Main content of each view -->
   </body>
 </html>

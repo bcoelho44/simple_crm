@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+  root "customers#index"  # Sets the root URL to the index action of Customers
+
+  get "customers/alphabetized", to: "customers#alphabetized", as: :alphabetized_customers
+  get "customers/missing_email", to: "customers#missing_email", as: :missing_email_customers
 end
